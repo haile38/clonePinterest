@@ -1,0 +1,205 @@
+.wrapper {
+    display: grid;
+    font-size: 60px;
+    padding: 10px;
+
+    label {
+        font-size: 14px;
+        font-weight: 600;
+        margin-left: 3px;
+        margin-bottom: 10px;
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        /* Khoảng cách bên trong input */
+        border: 2px solid rgb(205, 205, 205);
+
+        /* Viền */
+        border-radius: 10px;
+        /* Góc bo tròn viền */
+        font-size: 16px;
+        /* Kích thước chữ */
+        width: 250px;
+        /* Chiều rộng */
+        transition: border-color 0.3s ease-in-out;
+
+        .inputClassname {
+            position: fixed;
+        }
+
+        &:hover {
+            border-color: #007bff !important;
+            border: solid 2px;
+            /* Màu viền thay đổi khi hover */
+        }
+
+        &:focus {
+            outline: 2px #007bff;
+            /* Loại bỏ đường viền xanh khi focus (trên các trình duyệt phổ biến) */
+            border-color: 5px #007bff;
+            /* Màu viền khi focus */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            /* Hiệu ứng bóng đổ */
+        }
+    }
+    &.dark {
+        input,
+        textarea {
+            background-color: #dfdfdf;
+        }
+    }
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 15px;
+        color: #000;
+    }
+
+    //dung` cho rieng le
+    .small {
+        width: 250px;
+        height: 45px;
+    }
+
+    //dung cho binh thuong
+    .medium {
+        height: 50px;
+        width: 300px;
+    }
+
+    .medium2 {
+        width: 530px;
+        height: 50px;
+    }
+
+    //dung` cho story
+    .large {
+        width: 300px;
+        height: 100px;
+    }
+
+    .sizeTextAreaMedium {
+        width: 300px;
+        height: 100px;
+    }
+
+    .sizeTextAreaMedium2 {
+        width: 530px;
+        height: 100px;
+    }
+
+    @media screen and (max-width: 768px) {
+        //dung cho binh thuong
+        .wrapper {
+            //dung` cho rieng le
+            .small {
+                width: 250px;
+                height: 45px;
+            }
+
+            //dung cho binh thuong
+            .medium {
+                height: 50px;
+                width: 300px;
+            }
+
+            .medium2 {
+                width: 550px;
+                height: 50px;
+            }
+
+            //dung` cho story
+            .large {
+                width: 300px;
+                height: 100px;
+            }
+
+            .sizeTextAreaMedium {
+                width: 300px;
+                height: 100px;
+            }
+
+            .sizeTextAreaMedium2 {
+                width: 550px;
+                height: 100px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .wrapper {
+            .small {
+                width: 250px;
+                height: 45px;
+            }
+
+            //dung cho binh thuong
+            .medium {
+                height: 50px;
+                width: 300px;
+            }
+
+            .medium2 {
+                width: 550px;
+                height: 50px;
+            }
+
+            //dung` cho story
+            .large {
+                width: 300px;
+                height: 100px;
+            }
+
+            .sizeTextAreaMedium {
+                width: 300px;
+                height: 100px;
+            }
+            .sizeTextAreaMedium2 {
+                width: 550px;
+                height: 100px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 430px) {
+        .wrapper {
+            .small {
+                width: 250px;
+                height: 45px;
+            }
+
+            //dung cho binh thuong
+            .medium {
+                height: 50px;
+                width: 300px;
+            }
+
+            .medium2 {
+                width: 550px;
+                height: 50px;
+            }
+
+            //dung` cho story
+            .large {
+                width: 300px;
+                height: 100px;
+            }
+
+            .sizeTextAreaMedium {
+                width: 300px;
+                height: 100px;
+            }
+
+            .sizeTextAreaMedium2 {
+                width: 550px;
+                height: 100px;
+            }
+        }
+    }
+}
+.error {
+    font-size: 1.3rem;
+    color: #cc0000;
+    margin: 8px 0 0 5px;
+}

@@ -1,0 +1,108 @@
+.wrapper-message {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.message-header {
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    border-radius: 24px;
+    &.dark {
+        background-color: var(--normal-button-hover-background-color);
+    }
+}
+
+.message-header .wrapper-back-btn {
+    position: absolute;
+    padding: 0.8rem;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    &:hover {
+        background-color: #dddcdc;
+    }
+}
+
+.message-header .wrapper-back-btn .back-btn {
+    font-size: 24px;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.message-header .sender-name {
+    flex: 10;
+    text-align: center;
+    padding: 0.8rem;
+    &.dark {
+        color: var(--black);
+    }
+}
+
+//BODY
+.wrapper-message-list {
+    height: 74%;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.message-list {
+    padding-top: 0.8rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+// FOOTER
+.message-send-option {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.message-send-option input {
+    flex: 2;
+    padding: 1rem;
+    border-radius: 16px;
+    margin-right: 4px;
+    font-size: 16px;
+    &.dark {
+        background-color: var(--normal-button-hover-background-color);
+    }
+}
+
+.message-send-option .wrapper-send_heart-btn {
+    padding: 0.8rem;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    &:hover {
+        background-color: #dddcdc;
+    }
+}
+
+.message-send-option .send_heart-btn {
+    font-size: 24px;
+    background-color: inherit;
+    cursor: pointer;
+}

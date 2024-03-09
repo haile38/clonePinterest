@@ -1,0 +1,29 @@
+.bot-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    &.dark {
+        background-color: #232323;
+    }
+}
+
+.saveBtn {
+    margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .bot-bar {
+        padding-right: 50px;
+    }
+    .saveBtn {
+        margin-left: 10px;
+    }
+}

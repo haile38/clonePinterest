@@ -1,0 +1,182 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --black: #121212;
+    --white-500: #efefef;
+    --white-200: rgb(255, 255, 255);
+    --text-color: #333;
+    // --color-red: #e60023;
+
+    --color-header: #f0f4fd;
+    --color-blue-pastel: #8393ee;
+    --color-red-100: #c5cae9;
+    --color-red: #303f9f;
+    --color-red-darker: #283593;
+    --color-red-hover: #1a237e;
+    --background-popup-dark: #292929;
+    --background-popup-dark-hover: #373737;
+    --box-shadow-dark: 0px 1px 1px rgba(230, 222, 222, 0.874);
+    --message-menu-background-color: rgb(246, 248, 250);
+    --message-menu-hover-color: #e9e9e9;
+    --message-menu-font-size: 16px;
+    --normal-font-weight: 400;
+    --message-user-font-size: 14px;
+    --normal-button-hover-background-color: #e9e9e9;
+    --input-dark-mode-background-color: #616161;
+    --font-family: 'Noto Sans', sans-serif;
+
+    // Search
+    --search-border-radius: 92px;
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    --search-button-width: 52px;
+
+    //  Default layout
+    --default-layout-header-height: 70px;
+    --default-layout-height: 1306px;
+    --default-layout-width: 100vw;
+    --default-layout-horizontal-spacer: 24px;
+    --g-ncols: 12px;
+
+    //Search
+    --search-border-radius: 92px;
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    --search-button-width: 52px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: var(--black);
+    background-color: var(--white-200);
+    overflow-y: auto;
+    &.dark {
+        color: var(--white-200);
+        background-color: var(--black);
+        a {
+            color: var(--white-200);
+        }
+    }
+}
+
+// Custom scrollbar
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+// Custom tippy
+body {
+    .tippy-box {
+        background-color: rgba(84, 84, 84, 0.92);
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        line-height: 1rem;
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+        top: -8px;
+    }
+}
+
+// CUSTOM POPPER
+body {
+    //CUSTOM POPPER
+    .MuiPopper-root {
+        transform: translate3d(887.667px, 59.3333px, 0px) !important;
+    }
+    // CUSTOM ALERT MUI
+    .MuiAlert-icon,
+    .MuiAlert-action {
+        align-items: center;
+    }
+    .css-nla105-MuiStack-root {
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    }
+    // CUSTOM PAGINATION TABLE MUI
+    .css-pdct74-MuiTablePagination-selectLabel,
+    .css-levciy-MuiTablePagination-displayedRows {
+        font-size: 14px;
+    }
+    .css-i4bv87-MuiSvgIcon-root,
+    .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon,
+    .css-1mf6u8l-MuiSvgIcon-root-MuiSelect-icon {
+        width: 20px;
+        height: 20px;
+        top: auto;
+        &.dark {
+            color: #fff;
+        }
+    }
+    .MuiDialog-root {
+        &.dark {
+            & > .css-hz1bth-MuiDialog-container > .css-tlc64q-MuiPaper-root-MuiDialog-paper {
+                background-color: #232323;
+                & > form > h2 {
+                    color: #fff;
+                }
+                & > form > div > div > label {
+                    color: #fff;
+                }
+                & > h2 {
+                    color: #fff;
+                }
+                & > form > .css-ypiqx9-MuiDialogContent-root {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .fa-trash {
+        &.dark {
+            color: white;
+        }
+    }
+}

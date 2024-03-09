@@ -1,0 +1,38 @@
+.wrapper {
+    padding: 15px 0 0 0;
+    position: relative;
+}
+.information {
+    font-size: 12px;
+    margin: 12px 0 12px 12px;
+}
+.item-type {
+    display: flex;
+    position: relative;
+    padding: 4px;
+    border-radius: 5px;
+    min-width: 140px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    align-items: center;
+    p {
+        margin-left: 20px;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+.list-type {
+    overflow-y: auto;
+    height: 150px;
+}
+.bottom-create {
+    background-color: #d6d5d5;
+}

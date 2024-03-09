@@ -1,0 +1,75 @@
+//Menu wrapper
+.menu-list {
+    width: 190px;
+    padding-bottom: 8px;
+    //Menu item
+    .menu-item {
+        font-size: 1.3rem;
+        justify-content: flex-start;
+        &.dark {
+            background-color: var(--background-popup-dark);
+            color: var(--white-500);
+        }
+    }
+}
+
+.menu-popper {
+    padding-bottom: 8px;
+    &.dark {
+        background-color: var(--background-popup-dark);
+    }
+}
+
+// Menu-body
+.menu-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 20;
+}
+
+//Menu item
+.menu-item {
+    width: 100%;
+    border-radius: 0;
+    font-weight: 600;
+    padding: 11px 10px;
+    line-height: 1.8rem;
+    margin-left: 0px;
+    cursor: pointer;
+
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+        &.dark {
+            border-top: 1px solid rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+        &.dark {
+            background-color: var(--background-popup-dark-hover);
+        }
+    }
+}
+
+// Header menu
+.header {
+    position: relative;
+    flex-shrink: 0; //không bị co lại theo chiều dọc
+    height: 50px;
+    margin-top: -8px;
+}
+
+.back-btn {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

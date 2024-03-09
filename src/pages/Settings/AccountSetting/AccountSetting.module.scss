@@ -1,0 +1,118 @@
+$default-text-color: black;
+$default-background-color: white;
+$circle-radius: 50%;
+
+.wrapper {
+    display: flex;
+    width: calc(100vw - 270px);
+    height: fit-content;
+    .container-accountsetting {
+        margin-top: 20px;
+        margin-left: 80px;
+        width: 45%;
+        margin-bottom: 70px;
+
+        h1 {
+            font-size: 30px;
+            color: var(--color-red);
+            font-weight: bold;
+            margin-bottom: 20px;
+            &.dark {
+                color: var(--color-blue-pastel);
+            }
+        }
+
+        .PrivateUserInfo {
+            display: grid;
+
+            .Title {
+                margin-top: 20px;
+                padding-left: 10px;
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            // .EmailInfo {}
+
+            // .Password {}
+
+            .Button-change-password {
+                width: 150px;
+                height: 50px;
+                margin: 10px;
+                border-radius: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                border: black !important;
+
+                &:hover {
+                    background: rgb(210, 189, 189);
+                }
+            }
+
+            .checkedPrivate {
+                display: inline-flex;
+                align-items: center;
+                padding: 10px;
+
+                .leftDiscription {
+                    color: black;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                .rightDiscription {
+                    height: 65px;
+                    button {
+                        &.dark {
+                            background-color: var(--black);
+                            & > span:nth-child(2) > span > span:nth-child(2) {
+                                background-color: #ccc;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image {
+        width: 430px;
+        height: 230px;
+        object-fit: cover;
+    }
+    .labelCheckPrivate {
+        &.dark {
+            color: var(--white-200);
+        }
+    }
+}
+@media screen and (max-width: 1030px) {
+    .wrapper {
+        .container-infoProfile {
+            width: 45%;
+        }
+        .image {
+            width: 350px;
+            height: 200px;
+        }
+    }
+}
+@media screen and (max-width: 915px) {
+    .wrapper {
+        .container-accountsetting {
+            width: 100%;
+        }
+        .image-container {
+            display: none;
+        }
+        .labelCheckPrivate {
+            font-size: 16px;
+        }
+    }
+}

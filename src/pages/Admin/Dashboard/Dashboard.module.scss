@@ -1,0 +1,27 @@
+.wrapper {
+    margin: 20px;
+}
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.icon {
+    color: #08a0f7;
+}
+.iconDescription {
+    color: #54d885;
+    margin-right: 4px;
+    padding: 2px 0;
+}
+
+
+
+@media only screen and (max-width: 920px) {
+    .card-container {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+}

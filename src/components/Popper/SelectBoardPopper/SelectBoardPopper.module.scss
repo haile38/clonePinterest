@@ -1,0 +1,91 @@
+.wrapper {
+    padding: 15px 0;
+    position: relative;
+    width: 300px;
+}
+.information {
+    font-size: 12px;
+    margin: 12px 0 12px 12px;
+}
+.item-board {
+    display: flex;
+    position: relative;
+    padding: 4px;
+    width: 98%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    align-items: center;
+    img {
+        // border-radius: 14px;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 5px;
+        padding: 5px;
+        margin-left: 10px;
+    }
+    p {
+        margin-left: 20px;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+    &.dark {
+        background-color: var(--background-popup-dark);
+        color: var(--white-500);
+        box-shadow: rgba(203, 203, 203, 0.8) 0px 4px 8px -6px, rgba(203, 203, 203, 0.8) 0px 0px 0px 1px;
+    }
+}
+
+.bottom-create {
+    display: flex;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    align-items: center;
+
+    .createBtn {
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+    p {
+        font-size: 15px;
+        font-weight: bold;
+        margin-left: 30px;
+    }
+    &:hover {
+        background-color: #f0f0f0;
+    }
+    &.dark {
+        background-color: var(--background-popup-dark);
+        color: var(--white-500);
+        box-shadow: rgba(203, 203, 203, 0.8) 0px 4px 8px -6px, rgba(203, 203, 203, 0.8) 0px 0px 0px 1px;
+    }
+}
+.list-board {
+    overflow-y: auto;
+    height: 166px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    button:first-child {
+        margin-top: 0.2px;
+    }
+}

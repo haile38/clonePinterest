@@ -1,0 +1,93 @@
+.comment-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    // margin-top: 0.8rem;
+    height: calc(100% - 28px);
+}
+.wrapper {
+    height: calc(100% - 20px);
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+.comment-panel {
+    padding-top: 1.2rem;
+    height: calc(100% - 50px);
+}
+
+.comment-panel::-webkit-scrollbar-corner {
+    display: none;
+}
+
+.comment-wrapper {
+    width: 100%;
+    margin-top: 1.8rem;
+    position: relative;
+
+    .comment-body {
+        flex-basis: 60%;
+        // flex: 3;
+        // width: 75%;
+        display: flex;
+        align-items: flex-start;
+        p {
+            font-size: 14px;
+        }
+    }
+    .comment-option {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .delete-comment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .delete-button {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.comment-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    // &:hover ~ .comment-option {
+    //     display: flex;
+    // }
+    .user-infor {
+        // flex-basis: 40%;
+        display: flex;
+        align-items: flex-start;
+        padding-right: 8px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
+
+.action-button {
+    font-size: 14px;
+    background-color: #ffff;
+    cursor: pointer;
+    fill: currentColor;
+    &.dark {
+        background-color: var(--black);
+        color: #ffff;
+    }
+}

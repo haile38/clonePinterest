@@ -1,0 +1,205 @@
+.wrapper {
+    width: 252px;
+    padding: 10px 10px 10px 5px;
+    /* Chọn các item ở các dòng lẻ */
+}
+.container-image {
+    background-color: rgb(201, 178, 177);
+    box-sizing: border-box;
+    position: relative;
+    cursor: zoom-in;
+    border-radius: 16px;
+    height: 420px;
+    margin-bottom: 10px;
+    &:hover {
+        .option-top {
+            display: flex;
+        }
+        .option-bottom {
+            display: flex;
+        }
+    }
+}
+.image {
+    width: 100%;
+    border: 0;
+    height: 420px;
+    vertical-align: middle;
+    border-radius: 16px;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+// CUSTOMER ICON
+.kVc {
+    display: block;
+}
+.R19 {
+    color: #111111;
+}
+
+.gUZ {
+    fill: currentColor;
+    stroke-width: 0;
+    vertical-align: middle;
+}
+// Button
+.option-top {
+    display: none;
+    justify-content: space-between;
+    padding: 10px 10px 0 10px;
+}
+.option-top.active {
+    display: flex;
+}
+
+.select-board-btn {
+    z-index: 3;
+    border-radius: 50%;
+    background-color: transparent;
+    width: 65%;
+}
+.select-board {
+    width: 100%;
+    height: 36px;
+    span {
+        background-color: #f0f0f0;
+        border-radius: 24px;
+        width: 100%;
+        height: 36px;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            margin-left: 8px;
+        }
+    }
+}
+.changeBtn,
+.saveBtn {
+    cursor: pointer;
+    position: relative;
+    padding: 7px !important;
+    z-index: 3;
+}
+.selectBtn {
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+
+    &:hover {
+        background-color: #dad5d5;
+    }
+}
+
+// OPTION_BOTTOM
+.option-bottom {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: none;
+    justify-content: flex-end;
+    width: 100%;
+}
+.option-bottom.active {
+    display: flex;
+}
+.link-image {
+    width: 65%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 8px;
+}
+.btn-text,
+.btn,
+.btn-end {
+    background-color: rgba(255, 255, 255, 0.8);
+    perspective: 1px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px 10px;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+.btn-text,
+.btn {
+    margin-right: -2px;
+}
+.btn-text {
+    display: flex;
+    width: 100%;
+    border-radius: 18px;
+    font-weight: bold;
+}
+
+// INFO_USER
+.link-avatar {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    border-radius: 50%;
+    object-fit: cover; //ảnh giữ được tỷ lệ, tràn hình tròn của border radius
+    cursor: pointer;
+}
+.info-pin {
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 10px 0 5px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
+
+.grey-button {
+    background: #efefef;
+}
+.grey-button:hover {
+    background: #e2e2e2;
+}
+@media screen and (max-width: 1036px) {
+    .wrapper {
+        width: 25%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 33%;
+        padding: 10px;
+        + .wrapper {
+            padding-left: 5px;
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    .wrapper {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .wrapper {
+        width: 100%;
+    }
+}

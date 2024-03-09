@@ -1,0 +1,26 @@
+// .wrapper {
+//     width: 356px;
+//     padding: 20px 0 26px 8px;
+//     mar0000gin-left: -18px;
+// }
+.wrapper {
+    width: 250px;
+    // height: var(--default-layout-height);
+    padding: 20px 8px 26px 8px;
+    border-right: 1px solid #f0f0f0;
+    background-color: var(--color-blue-pastel);
+    &.dark {
+        background-color: #5c6bc0;
+        border-right: 1px solid var(--color-blue-pastel);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 250px;
+        // height: var(--default-layout-height);
+        transition: background-color 0.5s;
+        padding: 20px 8px 26px 8px;
+        border-right: 1px solid #f0f0f0;
+    }
+}

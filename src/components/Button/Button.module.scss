@@ -1,0 +1,139 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    padding: 12px 16px;
+    border-radius: 24px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+    cursor: pointer;
+    background-color: var(--white-200);
+    border: 1px solid transparent;
+    user-select: none;
+
+    // Nút đứng sau 1 nút => cách ra 1 khoảng
+    // +.wrapper {
+    //     margin-left: 8px;
+    // }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+.contentLeft {
+    justify-content: left;
+}
+.active {
+    justify-content: space-between;
+
+    .activeIcon {
+        display: inline-block;
+    }
+}
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: inline-grid;
+    width: 24px;
+    text-align: center;
+}
+.activeIcon {
+    width: 24px;
+    text-align: center;
+    display: none;
+}
+
+// .switch {
+//     margin-left: 20px;
+// }
+// Button types
+
+.rounded {
+    border-radius: 999px; //Để số lớn => tự động bo tròn
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    border-color: rgba(22, 24, 35, 0.12);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+// types primary được viết sau => ưu tiên hơn
+.primary {
+    color: #111111;
+    background-color: #efefef;
+    border-color: #efefef;
+
+    &:hover {
+        background: #e2e2e2;
+        border-color: #e2e2e2;
+    }
+}
+
+.red {
+    color: #ffffff;
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+
+    &:hover {
+        background: var(--color-red-hover);
+        border-color: var(--color-red-hover);
+    }
+}
+
+.outline {
+    color: var(--black);
+    border-color: currentColor; //giống màu color
+
+    &:hover {
+        border-color: currentColor; //giống màu color
+        background-color: rgba(87, 65, 70, 0.06);
+    }
+    &.active {
+        background-color: red;
+    }
+}
+
+//Button sizes
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+    font-size: 12px;
+}
+
+.large {
+    padding: 14px 16px;
+    min-width: 140px;
+}
+
+@media screen {
+    .red {
+        color: #ffffff;
+        background-color: var(--color-red);
+        border-color: var(--color-red);
+        font-size: smaller;
+        &:hover {
+            background: var(--color-red-hover);
+            border-color: var(--color-red-hover);
+        }
+    }
+
+    .primary {
+        color: #111111;
+        background-color: #efefef;
+        border-color: #efefef;
+        font-size: smaller;
+
+        &:hover {
+            background: #e2e2e2;
+            border-color: #e2e2e2;
+        }
+    }
+}

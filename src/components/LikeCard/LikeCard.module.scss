@@ -1,0 +1,28 @@
+.wrapper-like {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+.heart {
+    background-image: url('https://s.pinimg.com/webapp/love-1ec7b8e4.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 4px;
+    height: 19px;
+    width: 19px;
+}
+.like-btn {
+    margin-left: 12px;
+    background-color: #f0f0f0;
+    perspective: 1px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

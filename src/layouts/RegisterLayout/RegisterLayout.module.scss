@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    flex-direction: column; //quay theo chiều dọc
+    align-items: center;
+}
+
+.container {
+    width: var(--default-layout-width);
+    max-width: 100%;
+    margin-top: calc(var(--default-layout-header-height));
+    display: flex;
+}
+
+.content {
+    flex: 1;
+}

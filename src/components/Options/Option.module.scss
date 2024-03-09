@@ -1,0 +1,55 @@
+.Options {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.OptionsLabel {
+    font-size: 14px;
+    font-weight: rgb(205, 205, 205);
+    margin-left: 3px;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 10px;
+    /* Khoảng cách bên trong input */
+    border: 2px solid rgb(205, 205, 205);
+
+    /* Viền */
+    border-radius: 10px;
+    /* Góc bo tròn viền */
+    font-size: 16px;
+    /* Kích thước chữ */
+    width: 250px;
+    /* Chiều rộng */
+    transition: border-color 0.3s ease-in-out;
+    // color: ;
+
+    .inputClassname {
+        position: fixed;
+    }
+
+    &:hover {
+        border-color: #007bff !important;
+        border: solid 2px;
+        /* Màu viền thay đổi khi hover */
+    }
+
+    &:focus {
+        outline: 2px #007bff;
+        /* Loại bỏ đường viền xanh khi focus (trên các trình duyệt phổ biến) */
+        border-color: 5px #007bff;
+        /* Màu viền khi focus */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        /* Hiệu ứng bóng đổ */
+    }
+    &.dark {
+        background-color: #dfdfdf;
+    }
+}
+
+select::placeholder {
+    font-size: 15px;
+    color: #000;
+}

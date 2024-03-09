@@ -1,0 +1,137 @@
+$default-text-color: black;
+$default-background-color: white;
+$circle-radius: 50%;
+
+.wrapper {
+    display: flex;
+    width: calc(100vw - 270px);
+    height: fit-content;
+}
+.container-infoProfile {
+    margin-top: 20px;
+    margin-left: 80px;
+    width: 50%;
+    margin-bottom: 70px;
+
+    h1 {
+        color: var(--color-red);
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 20px;
+        &.dark {
+            color: var(--color-blue-pastel);
+        }
+    }
+
+    .name-and-lastname {
+        display: flex;
+        align-items: center;
+    }
+
+    .setUserProfilePhoto {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+
+        .UserPhoto {
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background: transparent !important;
+            }
+        }
+
+        .setUserProfilePhoto-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .GenderOption {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .GenderOptionLabel {
+        font-size: large;
+        font-weight: bold;
+        margin-bottom: 10px;
+        /* Đặt khoảng cách dưới giữa label và select */
+    }
+
+    select {
+        padding: 10px;
+        border: 2px solid;
+        border-radius: 10px;
+        font-size: 16px;
+        width: 240px;
+        transition: border-color 0.3s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+        margin-right: 10%;
+        margin-left: 10%;
+
+        .discription {
+            width: 100%;
+        }
+        .GenderOption {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .GenderOptionLabel {
+            font-size: large;
+            font-weight: bold;
+            margin-bottom: 10px;
+            /* Đặt khoảng cách dưới giữa label và select */
+        }
+
+        select {
+            padding: 10px;
+            border: 2px solid;
+            border-radius: 10px;
+            font-size: 16px;
+            width: 240px;
+            transition: border-color 0.3s ease-in-out;
+        }
+    }
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image {
+    width: 430px;
+    height: 230px;
+    object-fit: cover;
+}
+@media screen and (max-width: 1030px) {
+    .wrapper {
+        .container-infoProfile {
+            width: 45%;
+        }
+        .image {
+            width: 350px;
+            height: 200px;
+        }
+    }
+}
+@media screen and (max-width: 915px) {
+    .wrapper {
+        .container-infoProfile {
+            width: 100%;
+        }
+        .image-container {
+            display: none;
+        }
+    }
+}
